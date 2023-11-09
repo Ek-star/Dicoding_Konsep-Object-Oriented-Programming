@@ -3,14 +3,14 @@ interface IFly2 {
     val numberOfWings: Int
 }
 
-fun flyWithWings(bird: IFly) {
+fun flyWithWings(bird: IFly2) {
     bird.fly()
 }
 
 fun main() {
     // Seperti namanya, yang dimaksud dengan anonymous adalah class yang tak memiliki nama. Alih-alih mendefinisikan class menggunakan keyword class, Anda bisa langsung mendefinisikan isi dari sebuah class dengan menggunakan keyword object:
 
-    flyWithWings(object : IFly {
+    flyWithWings(object : IFly2 {
         override fun fly() {
             if(numberOfWings > 0) println("Flying with $numberOfWings wings")
             else println("I'm Flying without wings")
